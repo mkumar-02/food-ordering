@@ -1,4 +1,7 @@
-from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey
+
+from sqlalchemy import (
+    Column, Integer, String, Numeric, Boolean, ForeignKey
+)
 from sqlalchemy.orm import relationship
 
 from app.database import Base
@@ -10,7 +13,7 @@ class MenuItem(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(150), nullable=False)
     description = Column(String(500))
-    price = Column(Float, nullable=False)
+    price = Column(Numeric(10, 2), nullable=False)
     available = Column(Boolean, default=True, nullable=False)
 
     restaurant_id = Column(
