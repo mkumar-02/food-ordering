@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Food Ordering API local files
+.idea/
+*.db
+fastapienv/
