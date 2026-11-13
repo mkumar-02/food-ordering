@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.db
+.env
+**/.env
+.git/
+.idea/
+.pytest_cache/
+.venv/
+venv/
+fastenv/
+fastapienv/
