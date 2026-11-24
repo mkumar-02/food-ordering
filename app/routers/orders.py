@@ -16,7 +16,7 @@ router = APIRouter(
 )
 
 
-# Customer: Place an order
+
 @router.post(
     "/",
     response_model=OrderResponse,
@@ -34,7 +34,7 @@ def create_order(
     )
 
 
-# Customer, owner, admin: View orders with pagination
+
 @router.get("/", response_model=list[OrderResponse])
 def list_orders(
     skip: int = Query(default=0, ge=0),
@@ -73,7 +73,7 @@ def list_orders(
     return []
 
 
-# Customer, owner, admin: View a particular order
+
 @router.get("/{order_id}", response_model=OrderResponse)
 def get_order(
     order_id: int,
@@ -117,7 +117,7 @@ def get_order(
     )
 
 
-# Customer: Cancel own order
+
 @router.post("/{order_id}/cancel", response_model=OrderResponse)
 def cancel_order(
     order_id: int,
